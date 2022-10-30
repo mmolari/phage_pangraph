@@ -1,0 +1,16 @@
+accession: "config/accession_numbers.csv"
+species:
+  - "autographiviridae"
+  - "demerecviridae_markadamsvirinae"
+  - "drexlerviridae"
+  - "myoviridae_ounavirinae"
+  - "myoviridae_tevenvirinae"
+  - "myoviridae_vequintavirinae_and_relatives"
+  - "schitoviridae"
+  - "siphoviridae_dhillonvirus"
+  - "siphoviridae_queuovirinae_seuratvirus"
+  - "siphoviridae_queuovirinae_sonagvirus"
+  
+pangraph:
+  options:
+    std: "--circular -k minimap2 -a 10 -b 100"
