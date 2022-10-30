@@ -10,7 +10,10 @@ species:
   - "siphoviridae_dhillonvirus"
   - "siphoviridae_queuovirinae_seuratvirus"
   - "siphoviridae_queuovirinae_sonagvirus"
-  
+
+genome-comparison:
+  mash-opt: "-k 15 -s 5000"
+
 pangraph:
   options:
     std: "--circular -k minimap2 -s 20 -a 100 -b 10"

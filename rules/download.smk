@@ -1,9 +1,3 @@
-import pandas as pd
-
-df_acc = pd.read_csv(config["accession"])
-acc_list = df_acc["genbank_accession"].to_list()
-
-
 rule download_gbk:
     output:
         "raw_data/gbk/{acc}.gbk",
