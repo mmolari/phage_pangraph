@@ -13,4 +13,4 @@ species:
   
 pangraph:
   options:
-    std: "--circular -k minimap2 -a 10 -b 100"
+    std: "--circular -k minimap2 -s 20 -a 100 -b 10"
