@@ -3,9 +3,9 @@ GC_config = config["genome-comparison"]
 
 rule GC_mash_dist:
     input:
-        fa=expand(rules.gbk_to_fa.output.fa, acc=acc_list),
+        fa=lambda w: expand(rules.gbk_to_fasta.output.fa, acc=species_to_acc[w.species]),
     output:
-        "results/genome_comparisons/mash_triangle.txt",
+        "results/mash_triangle/{species}.txt",
     conda:
         "../conda_env/bioinfo.yml"
     params:
@@ -21,4 +21,4 @@ rule GC_mash_dist:
 
 rule GC_all:
     input:
-        rules.GC_mash_dist.output,
+        expand(rules.GC_mash_dist.output, species=species),
