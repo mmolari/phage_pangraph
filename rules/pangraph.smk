@@ -1,3 +1,5 @@
+import os
+
 PG_config = config["pangraph"]
 kernel = PG_config["kernel-options"]
 
@@ -6,11 +8,11 @@ wildcard_constraints:
     opt=f"({'|'.join(kernel.keys())})",
 
 
-rule PG_build_pangraph:
+rule PG_build:
     input:
         fa=lambda w: expand(rules.gbk_to_fasta.output.fa, acc=species_to_acc[w.species]),
     output:
-        "results/pangraph/{species}/{opt}.json",
+        temp("results/pangraph/{species}/{opt}.json"),
     params:
         opt=lambda w: kernel[w.opt],
     shell:
@@ -19,9 +21,9 @@ rule PG_build_pangraph:
         """
 
 
-rule PG_polish_pangraph:
+rule PG_polish:
     input:
-        rules.PG_build_pangraph.output,
+        rules.PG_build.output,
     output:
         "results/pangraph/{species}/{opt}-polished.json",
     params:
@@ -34,7 +36,24 @@ rule PG_polish_pangraph:
         """
 
 
+rule PG_export:
+    input:
+        rules.PG_polish.output,
+    output:
+        directory("results/gfa/{species}/{opt}"),
+    conda:
+        "../conda_env/pangraph.yml"
+    shell:
+        """
+        pangraph export \
+            --no-duplications \
+            --output-directory {output} \
+            --prefix export \
+            {input}
+        """
+
+
 rule PG_all:
     input:
-        expand(rules.PG_build_pangraph.output, species=species, opt=kernel.keys()),
-        expand(rules.PG_polish_pangraph.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_polish.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_export.output, species=species, opt=kernel.keys()),

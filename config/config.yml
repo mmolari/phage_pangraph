@@ -10,6 +10,7 @@ species:
   - "siphoviridae_dhillonvirus"
   - "siphoviridae_queuovirinae_seuratvirus"
   - "siphoviridae_queuovirinae_sonagvirus"
+  - "basel"
 
 genome-comparison:
   mash-opt: "-k 15 -s 5000"
@@ -17,4 +18,4 @@ genome-comparison:
 pangraph:
   kernel-options:
     std: "--circular -k minimap2 -s 20 -a 100 -b 10"
-  polish-options: ""
+  polish-options: "-c"
