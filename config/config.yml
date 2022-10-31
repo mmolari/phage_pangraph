@@ -15,5 +15,6 @@ genome-comparison:
   mash-opt: "-k 15 -s 5000"
 
 pangraph:
-  options:
+  kernel-options:
     std: "--circular -k minimap2 -s 20 -a 100 -b 10"
+  polish-options: ""

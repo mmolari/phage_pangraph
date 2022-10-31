@@ -15,3 +15,4 @@ wildcard_constraints:
 
 include: "rules/download.smk"
 include: "rules/genomes_comparison.smk"
+include: "rules/pangraph.smk"
