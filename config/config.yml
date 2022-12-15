@@ -1,4 +1,6 @@
 accession: "config/accession_numbers.csv"
+accession-covid: "config/covid_acc_nums.txt"
+
 species:
   - "autographiviridae"
   - "demerecviridae_markadamsvirinae"

@@ -26,3 +26,4 @@ rule gbk_to_fasta:
 rule download_all:
     input:
         expand(rules.gbk_to_fasta.output, acc=acc_list),
+        expand(rules.gbk_to_fasta.output, acc=covid_accnums),

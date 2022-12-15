@@ -11,6 +11,9 @@ species_to_acc["basel"] = df_acc[df_acc["basel_collection"]][
 ].to_list()
 species = config["species"]
 
+# accession numbers of coronaviridae
+covid_accnums = pd.read_csv(config["accession-covid"]).to_numpy().flatten()
+
 
 wildcard_constraints:
     species=f"({'|'.join(species)})",
@@ -19,3 +22,4 @@ wildcard_constraints:
 include: "rules/download.smk"
 include: "rules/genomes_comparison.smk"
 include: "rules/pangraph.smk"
+include: "rules/coronaviridae.smk"
