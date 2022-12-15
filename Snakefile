@@ -12,7 +12,10 @@ species_to_acc["basel"] = df_acc[df_acc["basel_collection"]][
 species = config["species"]
 
 # accession numbers of coronaviridae
-covid_accnums = pd.read_csv(config["accession-covid"]).to_numpy().flatten()
+df_covid = pd.read_csv(config["accession-covid"])
+cov_accnums = df_covid["acc"].to_list()
+cov_genus_acc = df_covid.groupby("genus")["acc"].apply(list).to_dict()
+cov_genus_acc["all"] = cov_accnums
 
 
 wildcard_constraints:

@@ -1,5 +1,5 @@
 accession: "config/accession_numbers.csv"
-accession-covid: "config/covid_acc_nums.txt"
+accession-covid: "config/covid_dataset.csv"
 
 species:
   - "autographiviridae"
@@ -15,9 +15,10 @@ species:
   - "basel"
 
 genome-comparison:
-  mash-opt: "-k 15 -s 5000"
+  mash-opt: "-k 15 -s 10000"
 
 pangraph:
   kernel-options:
     std: "--circular -k minimap2 -s 20 -a 100 -b 10"
+    20-100-5: "--circular -k minimap2 -s 20 -a 100 -b 10"
   polish-options: "-c"
