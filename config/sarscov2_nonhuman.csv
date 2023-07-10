@@ -1,0 +1,57 @@
+Host,Pangolin,Accession,Organism_Name,Length,Country,Collection_Date
+Canis lupus,B.1,ON966106,Severe acute respiratory syndrome coronavirus 2,29831,Thailand,2020-04-04
+Canis lupus familiaris,AY.129,ON982612,Severe acute respiratory syndrome coronavirus 2,29824,Switzerland,2021-11-16
+Canis lupus familiaris,B.1,MZ902042,Severe acute respiratory syndrome coronavirus 2,29815,Spain,2020-09-26
+Canis lupus familiaris,B.1.1,MW263336,Severe acute respiratory syndrome coronavirus 2,29834,USA,2020-07-28
+Canis lupus familiaris,B.1.1.7,MZ396818,Severe acute respiratory syndrome coronavirus 2,29778,Thailand,2021-05-04
+Canis lupus familiaris,B.1.177,MW397523,Severe acute respiratory syndrome coronavirus 2,29876,Italy,2020-11-04
+Canis lupus familiaris,B.1.617.2,ON248600,Severe acute respiratory syndrome coronavirus 2,29816,India,2021-05-26
+Canis lupus familiaris,BA.1.17,ON115269,Severe acute respiratory syndrome coronavirus 2,29827,Spain,2022-01-01
+Canis lupus familiaris,BA.2,OP809597,Severe acute respiratory syndrome coronavirus 2,29848,Namibia,2022-08-02
+Canis lupus familiaris,P.6,OM966899,Severe acute respiratory syndrome coronavirus 2,29861,Uruguay,2020-12-22
+Feliformia,B.1,MT628700,Severe acute respiratory syndrome coronavirus 2,29830,Hong Kong,2020-03-30
+Felis catus,AY.4,ON982606,Severe acute respiratory syndrome coronavirus 2,29817,Switzerland,2021-12-14
+Felis catus,B.1,MZ901915,Severe acute respiratory syndrome coronavirus 2,29836,Spain,2020-09-09
+Felis catus,B.1.1,MW064259,Severe acute respiratory syndrome coronavirus 2,29409,Chile,2020-05-16
+Felis catus,B.1.1.254,MT709105,Severe acute respiratory syndrome coronavirus 2,29838,France,2020-05-14
+Felis catus,B.1.1.7,MZ401455,Severe acute respiratory syndrome coronavirus 2,29713,Thailand,2021-05-07
+Felis catus,B.1.234,MW263334,Severe acute respiratory syndrome coronavirus 2,29836,USA,2020-06-28
+Felis catus,B.1.240,MW856303,Severe acute respiratory syndrome coronavirus 2,29731,USA,2020-12-18
+Felis catus,B.1.571,MW263335,Severe acute respiratory syndrome coronavirus 2,29834,USA,2020-07-17
+Felis catus,B.1.577,MW263337,Severe acute respiratory syndrome coronavirus 2,29834,USA,2020-07-29
+Felis catus,B.1.617.2,ON982610,Severe acute respiratory syndrome coronavirus 2,29817,Switzerland,2021-12-09
+Felis catus,C.37,MZ496613,Severe acute respiratory syndrome coronavirus 2,29794,Peru,2021-03-26
+Felis catus,P.6,OM966900,Severe acute respiratory syndrome coronavirus 2,29862,Uruguay,2020-12-17
+Mesocricetus auratus,B,MT835140,Severe acute respiratory syndrome coronavirus 2,29782,Hong Kong,2020-05-15
+Mesocricetus auratus,B.1,OW444422,Severe acute respiratory syndrome coronavirus 2,29867,Germany,2022-01-01
+Mesocricetus auratus,B.39,MT835142,Severe acute respiratory syndrome coronavirus 2,29782,Hong Kong,2020-05-15
+Mus musculus,B.1.351,OM062573,Severe acute respiratory syndrome coronavirus 2,29885,China,2021-05-01
+Mustela lutreola,B.1,MW562261,Severe acute respiratory syndrome coronavirus 2,29894,USA,2020-10-13
+Mustela lutreola,B.1.8,MT457400,Severe acute respiratory syndrome coronavirus 2,29890,Netherlands,2020-05-06
+Mustela lutreola,B.11,MT457394,Severe acute respiratory syndrome coronavirus 2,29878,Netherlands,2020-04-29
+Mustela putorius furo,B.1.177,MZ099821,Severe acute respiratory syndrome coronavirus 2,29824,Spain,2020-11-16
+Neogale vison,B.1,MW626426,Severe acute respiratory syndrome coronavirus 2,29794,USA,2020-10-13
+Neogale vison,B.1.1,MT919534,Severe acute respiratory syndrome coronavirus 2,29836,Denmark,2020-06-17
+Neogale vison,B.1.1.298,MT919533,Severe acute respiratory syndrome coronavirus 2,29836,Denmark,2020-06-29
+Neogale vison,B.1.160,OL739160,Severe acute respiratory syndrome coronavirus 2,29835,Italy,2020-10-29
+Odocoileus virginianus,AY.103,OQ437937,Severe acute respiratory syndrome coronavirus 2,29801,USA,2021-11-30
+Odocoileus virginianus,AY.118,OQ437978,Severe acute respiratory syndrome coronavirus 2,29802,USA,2021-11-13
+Odocoileus virginianus,AY.25,OQ437947,Severe acute respiratory syndrome coronavirus 2,29804,USA,2021-11-30
+Odocoileus virginianus,AY.25.1,OQ437914,Severe acute respiratory syndrome coronavirus 2,29799,USA,2021-12-04
+Odocoileus virginianus,AY.3,OQ437941,Severe acute respiratory syndrome coronavirus 2,29809,USA,2021-12-04
+Odocoileus virginianus,AY.44,OQ437940,Severe acute respiratory syndrome coronavirus 2,29793,USA,2021-11-30
+Odocoileus virginianus,AY.5,OM570188,Severe acute respiratory syndrome coronavirus 2,29795,USA,2021-10-28
+Odocoileus virginianus,AY.75,OQ437943,Severe acute respiratory syndrome coronavirus 2,29803,USA,2021-11-30
+Odocoileus virginianus,AY.88,OM570193,Severe acute respiratory syndrome coronavirus 2,29792,USA,2021-11-28
+Odocoileus virginianus,B.1.1.7,OQ437945,Severe acute respiratory syndrome coronavirus 2,29801,USA,2021-12-04
+Odocoileus virginianus,B.1.582,OL790397,Severe acute respiratory syndrome coronavirus 2,29812,USA,2021-01-28
+Panthera leo,AY.20,OM181955,Severe acute respiratory syndrome coronavirus 2,29793,USA,2021-10-14
+Panthera leo,AY.23.1,OL677176,Severe acute respiratory syndrome coronavirus 2,29822,Singapore,2021-11-09
+Panthera leo,B.33,MT747978,Severe acute respiratory syndrome coronavirus 2,29835,USA,2020-04-04
+Panthera leo persica,AY.38,MZ413341,Severe acute respiratory syndrome coronavirus 2,29876,India,2021-05-01
+Panthera pardus fusca,B.1.617.2,OL691925,Severe acute respiratory syndrome coronavirus 2,29875,India,2021-09-10
+Panthera tigris,B.1,MT704314,Severe acute respiratory syndrome coronavirus 2,29882,USA,2020-04-04
+Panthera tigris,B.1.1.7,MZ305031,Severe acute respiratory syndrome coronavirus 2,29712,USA,2021-04-13
+Panthera tigris jacksoni,B.1,MT365033,Severe acute respiratory syndrome coronavirus 2,29897,USA,2020-04-02
+Rodentia,B,OL913104,Severe acute respiratory syndrome coronavirus 2,29903,China,2020-08-26
+Tadarida brasiliensis,A,OM995890,Severe acute respiratory syndrome coronavirus 2,29830,USA,2022-01-12

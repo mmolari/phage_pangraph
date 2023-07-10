@@ -17,6 +17,10 @@ cov_accnums = df_covid["acc"].to_list()
 cov_genus_acc = df_covid.groupby("genus")["acc"].apply(list).to_dict()
 cov_genus_acc["all"] = cov_accnums
 
+# accession numbers of non-human sarscov2
+df_scov = pd.read_csv(config["accession-sarscov"])
+scov_accnums = df_scov["Accession"].to_list()
+
 
 wildcard_constraints:
     species=f"({'|'.join(species)})",
@@ -26,3 +30,4 @@ include: "rules/download.smk"
 include: "rules/genomes_comparison.smk"
 include: "rules/pangraph.smk"
 include: "rules/coronaviridae.smk"
+include: "rules/sarscov2.smk"

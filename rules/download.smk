@@ -27,3 +27,4 @@ rule download_all:
     input:
         expand(rules.gbk_to_fasta.output, acc=acc_list),
         expand(rules.gbk_to_fasta.output, acc=cov_accnums),
+        expand(rules.gbk_to_fasta.output, acc=scov_accnums),
