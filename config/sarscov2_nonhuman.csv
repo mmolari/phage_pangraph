@@ -1,5 +1,4 @@
 Host,Pangolin,Accession,Organism_Name,Length,Country,Collection_Date
-Canis lupus,B.1,ON966106,Severe acute respiratory syndrome coronavirus 2,29831,Thailand,2020-04-04
 Canis lupus familiaris,AY.129,ON982612,Severe acute respiratory syndrome coronavirus 2,29824,Switzerland,2021-11-16
 Canis lupus familiaris,B.1,MZ902042,Severe acute respiratory syndrome coronavirus 2,29815,Spain,2020-09-26
 Canis lupus familiaris,B.1.1,MW263336,Severe acute respiratory syndrome coronavirus 2,29834,USA,2020-07-28
@@ -9,7 +8,6 @@ Canis lupus familiaris,B.1.617.2,ON248600,Severe acute respiratory syndrome coro
 Canis lupus familiaris,BA.1.17,ON115269,Severe acute respiratory syndrome coronavirus 2,29827,Spain,2022-01-01
 Canis lupus familiaris,BA.2,OP809597,Severe acute respiratory syndrome coronavirus 2,29848,Namibia,2022-08-02
 Canis lupus familiaris,P.6,OM966899,Severe acute respiratory syndrome coronavirus 2,29861,Uruguay,2020-12-22
-Feliformia,B.1,MT628700,Severe acute respiratory syndrome coronavirus 2,29830,Hong Kong,2020-03-30
 Felis catus,AY.4,ON982606,Severe acute respiratory syndrome coronavirus 2,29817,Switzerland,2021-12-14
 Felis catus,B.1,MZ901915,Severe acute respiratory syndrome coronavirus 2,29836,Spain,2020-09-09
 Felis catus,B.1.1,MW064259,Severe acute respiratory syndrome coronavirus 2,29409,Chile,2020-05-16
@@ -48,10 +46,8 @@ Odocoileus virginianus,B.1.582,OL790397,Severe acute respiratory syndrome corona
 Panthera leo,AY.20,OM181955,Severe acute respiratory syndrome coronavirus 2,29793,USA,2021-10-14
 Panthera leo,AY.23.1,OL677176,Severe acute respiratory syndrome coronavirus 2,29822,Singapore,2021-11-09
 Panthera leo,B.33,MT747978,Severe acute respiratory syndrome coronavirus 2,29835,USA,2020-04-04
-Panthera leo persica,AY.38,MZ413341,Severe acute respiratory syndrome coronavirus 2,29876,India,2021-05-01
+Panthera leo,AY.38,MZ413341,Severe acute respiratory syndrome coronavirus 2,29876,India,2021-05-01
 Panthera pardus fusca,B.1.617.2,OL691925,Severe acute respiratory syndrome coronavirus 2,29875,India,2021-09-10
 Panthera tigris,B.1,MT704314,Severe acute respiratory syndrome coronavirus 2,29882,USA,2020-04-04
 Panthera tigris,B.1.1.7,MZ305031,Severe acute respiratory syndrome coronavirus 2,29712,USA,2021-04-13
-Panthera tigris jacksoni,B.1,MT365033,Severe acute respiratory syndrome coronavirus 2,29897,USA,2020-04-02
-Rodentia,B,OL913104,Severe acute respiratory syndrome coronavirus 2,29903,China,2020-08-26
 Tadarida brasiliensis,A,OM995890,Severe acute respiratory syndrome coronavirus 2,29830,USA,2022-01-12

@@ -15,8 +15,7 @@ species:
   - "siphoviridae_queuovirinae_sonagvirus"
   - "basel"
 
-genome-comparison:
-  mash-opt: "-k 15 -s 10000"
+mash-opt: "-k 15 -s 10000"
 
 pangraph:
   kernel-options:

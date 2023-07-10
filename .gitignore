@@ -3,6 +3,7 @@
 .snakemake
 /notes/*.pdf
 /playground/figs
+/figures
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

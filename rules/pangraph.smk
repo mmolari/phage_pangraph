@@ -8,6 +8,23 @@ wildcard_constraints:
     opt=f"({'|'.join(kernel.keys())})",
 
 
+rule PG_mash:
+    input:
+        fa=lambda w: expand(rules.gbk_to_fasta.output.fa, acc=species_to_acc[w.species]),
+    output:
+        "results/mash_triangle/{species}.csv",
+    conda:
+        "../conda_env/bioinfo.yml"
+    params:
+        opt=config["mash-opt"],
+    shell:
+        """
+        mash triangle {params.opt} {input.fa} > {output}.temp
+        python3 scripts/mash_to_csv.py --mash_tri {output}.temp --csv {output}
+        rm {output}.temp
+        """
+
+
 rule PG_build:
     input:
         fa=lambda w: expand(rules.gbk_to_fasta.output.fa, acc=species_to_acc[w.species]),
@@ -53,7 +70,55 @@ rule PG_export:
         """
 
 
+rule PG_corealn:
+    input:
+        rules.PG_polish.output,
+    output:
+        "results/pangraph/{species}/corealn-{opt}.fa",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/core_genome_aln.py \
+            --pangraph {input} \
+            --aln {output} 
+        """
+
+
+rule PG_coretree:
+    input:
+        rules.PG_corealn.output,
+    output:
+        "results/pangraph/{species}/coretree-{opt}.nwk",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        fasttree -gtr -nt {input} > {output}
+        """
+
+
+rule PG_fig_mash:
+    input:
+        mash=rules.PG_mash.output,
+        tree=rules.PG_coretree.output,
+    output:
+        "figures/pangraph/{species}/{opt}-mash_dist.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mash_dist.py \
+            --mash {input.mash} \
+            --tree {input.tree} \
+            --fig {output}
+        """
+
+
 rule PG_all:
     input:
+        expand(rules.PG_mash.output, species=species),
         expand(rules.PG_polish.output, species=species, opt=kernel.keys()),
         expand(rules.PG_export.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_coretree.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_fig_mash.output, species=species, opt=kernel.keys()),

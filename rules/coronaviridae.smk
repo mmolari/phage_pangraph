@@ -7,7 +7,7 @@ rule CV_mash:
     conda:
         "../conda_env/bioinfo.yml"
     params:
-        opt=GC_config["mash-opt"],
+        opt=config["mash-opt"],
     shell:
         """
         mash triangle {params.opt} {input.fa} > {output}.temp

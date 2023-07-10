@@ -20,8 +20,24 @@ I ran a search on the #link("https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/viru
 
 This resulted in 451 sequences. I then excluded the ones without host identification, and selected one random sample per unique host/pango-lineage pairing. This resulted in 56 different sequences.
 
+I also manually curated annotations, removing slighlty ambiguous `ON966106` (_Canis lupus_), `MT628700` (_Feliformia_), `OL913104` (_Rodentia_). I simplified `Panthera leo persica` into `Pandthera leo`. I removed `MT365033` (_Panthera tigris jacksoni_, already present as _Panthera tigris_). This leaves us with 52 isolates.
+
 #figure( image("assets/n1/dset_stats.png", width: 100%))
+
+= Pangraph Generation and Core Genome Tree
 
 I generate a pangraph with minimap kernel and options `-a 20 -b 5`. The graph is almost completely alignable, except for some short overhangs missing in one strain (`MW064259`) around the edges.
 
 #figure( image("assets/n1/pangraph_export.png", width: 30%))
+
+Using the aligned core genome, which corresponds to almost the full genome, I build a core-genome tree, displayed in @fig_coretree. Very similar isolates can infect different hosts.
+
+#figure( image("assets/n1/scov_coretree.png", width: 80%),
+    caption: [
+        Core-genome tree of 52 SARS-Cov-2 isolates from different-non human host. For each isolate we report the host and the corresponding pango lineage.
+    ]
+) <fig_coretree>
+
+The mash distance for all of the isolates remains below 0.5%.
+
+#figure( image("assets/n1/mash_dist.png", width: 80%))

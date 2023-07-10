@@ -6,7 +6,7 @@ rule SC_mash:
     conda:
         "../conda_env/bioinfo.yml"
     params:
-        opt=GC_config["mash-opt"],
+        opt=config["mash-opt"],
     shell:
         """
         mash triangle {params.opt} {input.fa} > {output}.temp
@@ -92,8 +92,26 @@ rule SC_coretree:
         """
 
 
+rule SC_fig_mash:
+    input:
+        mash=rules.SC_mash.output,
+        tree=rules.SC_coretree.output,
+    output:
+        "figures/scov/{opt}-mash_dist.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mash_dist.py \
+            --mash {input.mash} \
+            --tree {input.tree} \
+            --fig {output}
+        """
+
+
 rule SC_all:
     input:
         rules.SC_mash.output,
         expand(rules.SC_export.output, opt=kernel.keys()),
         expand(rules.SC_coretree.output, opt=kernel.keys()),
+        expand(rules.SC_fig_mash.output, opt=kernel.keys()),

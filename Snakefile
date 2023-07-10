@@ -27,7 +27,6 @@ wildcard_constraints:
 
 
 include: "rules/download.smk"
-include: "rules/genomes_comparison.smk"
 include: "rules/pangraph.smk"
 include: "rules/coronaviridae.smk"
 include: "rules/sarscov2.smk"
