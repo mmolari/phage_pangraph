@@ -20,4 +20,4 @@ dependencies:
   - seaborn=0.11.2
   - pip:
     - networkx==2.8.4
-    - git+https://github.com/mmolari/pypangraph@0.1.0
+    - git+https://github.com/mmolari/pypangraph@0.1.1

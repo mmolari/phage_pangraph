@@ -25,6 +25,9 @@ if __name__ == "__main__":
     df = pan.to_blockstats_df()
     CB = df[df["core"]].index.to_list()
 
+    if len(CB) == 0:
+        raise ValueError("No core blocks found")
+
     # build alignments
     alns = defaultdict(str)
     for bid in CB:

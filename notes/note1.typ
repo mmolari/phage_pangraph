@@ -26,7 +26,7 @@ I also manually curated annotations, removing slighlty ambiguous `ON966106` (_Ca
 
 = Pangraph Generation and Core Genome Tree
 
-I generate a pangraph with minimap kernel and options `-a 20 -b 5`. The graph is almost completely alignable, except for some short overhangs missing in one strain (`MW064259`) around the edges.
+I generate a pangraph with minimap kernel and options `-a 20 -b 5`. The graph is almost completely alignable, except for some short overhangs missing in one strain (`MW064259`) around the edges. The core genome has a size of $~29$ kbp.
 
 #figure( image("assets/n1/pangraph_export.png", width: 30%))
 

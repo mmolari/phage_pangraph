@@ -109,9 +109,27 @@ rule SC_fig_mash:
         """
 
 
+rule SC_fig_mosaic:
+    input:
+        tree=rules.SC_coretree.output,
+        pan=rules.SC_polish.output,
+    output:
+        "figures/scov/{opt}-mosaic.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mosaic.py \
+            --tree {input.tree} \
+            --pan {input.pan} \
+            --fig {output}
+        """
+
+
 rule SC_all:
     input:
         rules.SC_mash.output,
         expand(rules.SC_export.output, opt=kernel.keys()),
         expand(rules.SC_coretree.output, opt=kernel.keys()),
         expand(rules.SC_fig_mash.output, opt=kernel.keys()),
+        expand(rules.SC_fig_mosaic.output, opt=kernel.keys()),

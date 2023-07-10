@@ -64,9 +64,28 @@ rule PG_export:
         """
         pangraph export \
             --no-duplications \
+            --edge-minimum-length 0 \
             --output-directory {output} \
             --prefix export \
             {input}
+        """
+
+
+rule PG_fig_bandage:
+    input:
+        rules.PG_export.output,
+    output:
+        "figures/pangraph/{species}/{opt}-bandage.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        bandage image \
+            {input}/export.gfa \
+            {output} \
+            --scope entire \
+            --lengths \
+            --colour depth \
         """
 
 
@@ -115,6 +134,23 @@ rule PG_fig_mash:
         """
 
 
+rule PG_fig_mosaic:
+    input:
+        tree=rules.PG_coretree.output,
+        pan=rules.PG_polish.output,
+    output:
+        "figures/pangraph/{species}/{opt}-mosaic.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mosaic.py \
+            --tree {input.tree} \
+            --pan {input.pan} \
+            --fig {output}
+        """
+
+
 rule PG_all:
     input:
         expand(rules.PG_mash.output, species=species),
@@ -122,3 +158,5 @@ rule PG_all:
         expand(rules.PG_export.output, species=species, opt=kernel.keys()),
         expand(rules.PG_coretree.output, species=species, opt=kernel.keys()),
         expand(rules.PG_fig_mash.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_fig_mosaic.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_fig_bandage.output, species=species, opt=kernel.keys()),
