@@ -84,7 +84,6 @@ rule PG_fig_bandage:
             {input}/export.gfa \
             {output} \
             --scope entire \
-            --lengths \
             --colour depth \
         """
 

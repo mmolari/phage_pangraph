@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     # assign colors to blocks
     bdf = pan.to_blockstats_df()
-    cmap = mpl.cm.get_cmap("rainbow")
+    cmap = mpl.cm.get_cmap("jet")
     np.random.seed(1)
     bl_color = {}
     for bid, row in bdf.iterrows():

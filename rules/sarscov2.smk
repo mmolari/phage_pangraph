@@ -64,6 +64,23 @@ rule SC_export:
         """
 
 
+rule SC_fig_bandage:
+    input:
+        rules.SC_export.output,
+    output:
+        "figures/scov/{opt}-bandage.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        bandage image \
+            {input}/export.gfa \
+            {output} \
+            --scope entire \
+            --colour depth \
+        """
+
+
 rule SC_corealn:
     input:
         rules.SC_polish.output,
@@ -133,3 +150,4 @@ rule SC_all:
         expand(rules.SC_coretree.output, opt=kernel.keys()),
         expand(rules.SC_fig_mash.output, opt=kernel.keys()),
         expand(rules.SC_fig_mosaic.output, opt=kernel.keys()),
+        expand(rules.SC_fig_bandage.output, opt=kernel.keys()),
