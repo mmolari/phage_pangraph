@@ -28,7 +28,7 @@ rule CV_build:
         opt=lambda w: kernel[w.opt],
     shell:
         """
-        pangraph build {params.opt} {input.fa} > {output}
+        pangraph build --circular {params.opt} {input.fa} > {output}
         """
 
 
@@ -58,6 +58,7 @@ rule CV_export:
         """
         pangraph export \
             --no-duplications \
+            --edge-minimum-length 0 \
             --output-directory {output} \
             --prefix export \
             {input}

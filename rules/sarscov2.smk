@@ -50,16 +50,45 @@ rule SC_export:
     input:
         rules.SC_polish.output,
     output:
-        directory("results/covid/export/{opt}"),
+        directory("results/scov/export/{opt}"),
     conda:
         "../conda_env/pangraph.yml"
     shell:
         """
         pangraph export \
             --no-duplications \
+            --edge-minimum-length 0 \
             --output-directory {output} \
             --prefix export \
             {input}
+        """
+
+
+rule SC_corealn:
+    input:
+        rules.SC_polish.output,
+    output:
+        "results/scov/tree/corealn-{opt}.fa",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/core_genome_aln.py \
+            --pangraph {input} \
+            --aln {output} 
+        """
+
+
+rule SC_coretree:
+    input:
+        rules.SC_corealn.output,
+    output:
+        "results/scov/tree/coretree-{opt}.nwk",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        fasttree -gtr -nt {input} > {output}
         """
 
 
@@ -67,3 +96,4 @@ rule SC_all:
     input:
         rules.SC_mash.output,
         expand(rules.SC_export.output, opt=kernel.keys()),
+        expand(rules.SC_coretree.output, opt=kernel.keys()),

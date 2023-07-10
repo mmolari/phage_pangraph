@@ -17,7 +17,7 @@ rule PG_build:
         opt=lambda w: kernel[w.opt],
     shell:
         """
-        pangraph build {params.opt} {input.fa} > {output}
+        pangraph build --circular {params.opt} {input.fa} > {output}
         """
 
 
