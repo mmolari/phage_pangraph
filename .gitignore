@@ -1,6 +1,8 @@
 /raw_data
 /results
 .snakemake
+/notes/*.pdf
+/playground/figs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
