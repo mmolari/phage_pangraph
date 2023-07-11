@@ -41,3 +41,9 @@ Using the aligned core genome, which corresponds to almost the full genome, I bu
 The mash distance for all of the isolates remains below 0.5%.
 
 #figure( image("assets/n1/mash_dist.png", width: 80%))
+
+#figure( image("assets/n1/mosaic.png", width: 80%),
+    caption: [
+        Linear representation for the pangenome graph. Genomes are almost completely alignable, except for some short overhangs missing in one strain (`MW064259`) around the edges.
+    ]
+)
