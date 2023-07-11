@@ -126,6 +126,21 @@ rule SC_fig_mash:
         """
 
 
+rule SC_fig_mash_simple:
+    input:
+        mash=rules.SC_mash.output,
+    output:
+        "figures/scov/{opt}-mash_dist_simple.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mash_simple.py \
+            --mash {input.mash} \
+            --fig {output}
+        """
+
+
 rule SC_fig_mosaic:
     input:
         tree=rules.SC_coretree.output,
@@ -149,5 +164,6 @@ rule SC_all:
         expand(rules.SC_export.output, opt=kernel.keys()),
         expand(rules.SC_coretree.output, opt=kernel.keys()),
         expand(rules.SC_fig_mash.output, opt=kernel.keys()),
+        expand(rules.SC_fig_mash_simple.output, opt=kernel.keys()),
         expand(rules.SC_fig_mosaic.output, opt=kernel.keys()),
         expand(rules.SC_fig_bandage.output, opt=kernel.keys()),

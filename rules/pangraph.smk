@@ -133,6 +133,21 @@ rule PG_fig_mash:
         """
 
 
+rule PG_fig_mash_simple:
+    input:
+        mash=rules.PG_mash.output,
+    output:
+        "figures/pangraph/{species}/{opt}-mash_dist_simple.png",
+    conda:
+        "../conda_env/bioinfo.yml"
+    shell:
+        """
+        python3 scripts/plot_mash_simple.py \
+            --mash {input.mash} \
+            --fig {output}
+        """
+
+
 rule PG_fig_mosaic:
     input:
         tree=rules.PG_coretree.output,
@@ -146,6 +161,7 @@ rule PG_fig_mosaic:
         python3 scripts/plot_mosaic.py \
             --tree {input.tree} \
             --pan {input.pan} \
+            --circular \
             --fig {output}
         """
 
@@ -157,5 +173,6 @@ rule PG_all:
         expand(rules.PG_export.output, species=species, opt=kernel.keys()),
         expand(rules.PG_coretree.output, species=species, opt=kernel.keys()),
         expand(rules.PG_fig_mash.output, species=species, opt=kernel.keys()),
+        expand(rules.PG_fig_mash_simple.output, species=species, opt=kernel.keys()),
         expand(rules.PG_fig_mosaic.output, species=species, opt=kernel.keys()),
         expand(rules.PG_fig_bandage.output, species=species, opt=kernel.keys()),
