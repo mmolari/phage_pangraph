@@ -35,3 +35,7 @@ include: "rules/pangraph.smk"
 include: "rules/coronaviridae.smk"
 include: "rules/sarscov2.smk"
 include: "rules/flu.smk"
+
+
+localrules:
+    download_gbk,
