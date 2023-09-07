@@ -153,7 +153,8 @@ rule PG_fig_mosaic:
         tree=rules.PG_coretree.output,
         pan=rules.PG_polish.output,
     output:
-        "figures/pangraph/{species}/{opt}-mosaic.png",
+        fig1="figures/pangraph/{species}/{opt}-mosaic.png",
+        fig2="figures/pangraph/{species}/{opt}-paths.png",
     conda:
         "../conda_env/bioinfo.yml"
     shell:
@@ -162,7 +163,13 @@ rule PG_fig_mosaic:
             --tree {input.tree} \
             --pan {input.pan} \
             --circular \
-            --fig {output}
+            --fig {output.fig1}
+
+        python3 scripts/plot_junction_categories.py \
+            --tree {input.tree} \
+            --pangraph {input.pan} \
+            --fig {output.fig2} \
+            --len_filt 500
         """
 
 

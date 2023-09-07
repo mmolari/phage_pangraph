@@ -21,6 +21,10 @@ cov_genus_acc["all"] = cov_accnums
 df_scov = pd.read_csv(config["accession-sarscov"])
 scov_accnums = df_scov["Accession"].to_list()
 
+# accession numbers of flu
+df_flu = pd.read_csv(config["accession-flu"])
+flu_accnums = df_flu["acc"].to_list()
+
 
 wildcard_constraints:
     species=f"({'|'.join(species)})",
@@ -30,3 +34,4 @@ include: "rules/download.smk"
 include: "rules/pangraph.smk"
 include: "rules/coronaviridae.smk"
 include: "rules/sarscov2.smk"
+include: "rules/flu.smk"

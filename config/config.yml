@@ -1,6 +1,7 @@
 accession: "config/accession_numbers.csv"
 accession-covid: "config/covid_dataset.csv"
 accession-sarscov: "config/sarscov2_nonhuman.csv"
+accession-flu: "config/flu_dataset.csv"
 
 species:
   - "autographiviridae"
