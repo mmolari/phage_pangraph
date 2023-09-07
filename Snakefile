@@ -23,6 +23,7 @@ scov_accnums = df_scov["Accession"].to_list()
 
 # accession numbers of flu
 df_flu = pd.read_csv(config["accession-flu"])
+df_flu = df_flu[df_flu["selected"]]
 flu_accnums = df_flu["acc"].to_list()
 
 

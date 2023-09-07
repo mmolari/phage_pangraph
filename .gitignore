@@ -3,6 +3,7 @@
 .snakemake
 /notes/*.pdf
 /playground/figs
+/playground/flu/figs
 /playground/flu/*.txt
 /playground/flu/*.csv
 /figures

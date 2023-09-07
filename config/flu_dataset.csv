@@ -1,39 +1,74 @@
-acc,L,host,location,clade,year,strain,flu
-CY025002.1,1744,swine,arizona,148,1977,H1N1,A
-MW240531.1,1698,swine,south dakota,A02245757,2020,H1N1,A
-KP186072.1,1701,swine,north carolina,A01476778,2014,H1N1,A
-MW811345.1,1701,swine,minnesota,A02525220,2021,H1N1,A
-KP288100.1,1701,swine,indiana,A01477887,2014,H1N1,A
-EU735794.2,1745,chicken,pa,35154,1991,H1N1,A
-MH546347.1,1765,chicken,pennsylvania,16-002590-1,2016,H1N1,A
-MW345940.1,1701,chicken,china,1129,2019,H1N1,A
-MW186796.1,1739,duck,moscow,5743,2019,H1N1,A
-MW186804.1,1737,duck,moscow,5744,2019,H1N1,A
-LC367498.1,1762,duck,mongolia,675,2010,H1N1,A
-LC339531.1,1762,duck,hokkaido,201,2014,H1N1,A
-FJ432770.1,1741,duck,italy,281904,2006,H1N1,A
-MT197120.1,1701,mallard,ohio,19OS0177,2019,H1N1,A
-GQ257448.1,1752,mallard,maryland,13,2003,H1N1,A
-MW132351.1,1777,mallard,california,M15t72mH1,2018,H1N1,A
-KF424258.1,1710,mallard,minnesota,AI07-3140,2007,H1N1,A
-KF424178.1,1710,mallard,alberta,119,1998,H1N1,A
-MH503005.1,1743,ruddy turnstone,new jersey,UGAI15-4073,2015,H1N1,A
-MH597495.1,1748,ruddy turnstone,delaware,650682,2002,H1N1,A
-MH597471.1,1748,ruddy turnstone,delaware,650664,2002,H1N1,A
-MH341798.1,1746,ruddy turnstone,new jersey,UGAI15-3256,2015,H1N1,A
-MH502868.1,1746,ruddy turnstone,new jersey,UGAI15-3341,2015,H1N1,A
-MH134849.1,1777,environment,chile,C6861,2016,H1N1,A
-MK237430.1,1746,environment,maryland,17OS3446,2017,H1N1,A
-OR044145.1,1701,environment,japan,KU-H16,2021,H1N1,A
-KJ195788.1,1701,environment,gainesville,01,2014,H1N1,A
-KY681473.1,1777,environment,gainesville,12,2016,H1N1,A
-KX232477.1,1701,turkey,ontario,FAV-005-2,2016,H1N1,A
-FJ357104.1,1753,turkey,nc,17026,1988,H1N1,A
-MH546995.1,1747,turkey,missouri,16-009707-1,2016,H1N1,A
-EU743167.1,1752,turkey,sd,7034,1986,H1N1,A
-MH546987.1,1761,turkey,minnesota,16-009265-3,2016,H1N1,A
-MW855413.1,1777,human,new york city,PV07999,2020,H1N1,A
-MW855419.1,1777,human,new york city,PV08025,2020,H1N1,A
-OP433195.1,1777,human,new york city,PV42740,2022,H1N1,A
-MW855511.1,1778,human,new york city,PV08772,2020,H1N1,A
-MW855538.1,1777,human,new york city,PV08764,2020,H1N1,A
+acc,L,host,location,clade,year,strain,flu,selected
+CY025002.1,1744,swine,arizona,148,1977,H1N1,A,True
+MW240531.1,1698,swine,south dakota,A02245757,2020,H1N1,A,True
+KP186072.1,1701,swine,north carolina,A01476778,2014,H1N1,A,True
+MW811345.1,1701,swine,minnesota,A02525220,2021,H1N1,A,True
+KP288100.1,1701,swine,indiana,A01477887,2014,H1N1,A,True
+MG870276.1,1701,swine,iowa,A02139137,2017,H1N1,A,True
+OQ588691.1,1701,swine,ohio,OH19-9728,2019,H1N1,A,True
+KF924053.1,1701,swine,iowa,A01409206,2013,H1N1,A,True
+KR074142.1,1701,swine,nebraska,A01489614,2015,H1N1,A,True
+MF927840.1,1701,swine,guangxi,LB9,2014,H1N1,A,False
+EU735794.2,1745,chicken,pa,35154,1991,H1N1,A,True
+MH546347.1,1765,chicken,pennsylvania,16-002590-1,2016,H1N1,A,False
+MW345940.1,1701,chicken,china,1129,2019,H1N1,A,False
+MW186796.1,1739,duck,moscow,5743,2019,H1N1,A,False
+MW186804.1,1737,duck,moscow,5744,2019,H1N1,A,False
+LC367498.1,1762,duck,mongolia,675,2010,H1N1,A,False
+LC339531.1,1762,duck,hokkaido,201,2014,H1N1,A,False
+FJ432770.1,1741,duck,italy,281904,2006,H1N1,A,False
+L25071.1,1777,duck,wi,1938,80,H1N1,A,False
+LC497851.1,1777,duck,alberta,35,1976,H1N1,A,False
+OK559471.1,1701,duck,mongolia,2019-496,2019,H1N1,A,False
+MK979040.1,1755,duck,mongolia,837,2015,H1N1,A,False
+GU186632.1,1752,duck,alberta,35,1976,H1N1,A,False
+MT197120.1,1701,mallard,ohio,19OS0177,2019,H1N1,A,False
+GQ257448.1,1752,mallard,maryland,13,2003,H1N1,A,False
+MW132351.1,1777,mallard,california,M15t72mH1,2018,H1N1,A,False
+KF424258.1,1710,mallard,minnesota,AI07-3140,2007,H1N1,A,False
+KF424178.1,1710,mallard,alberta,119,1998,H1N1,A,False
+KY828644.1,1746,mallard,california,UCD343,2014,H1N1,A,False
+MH341854.1,1746,mallard,pennsylvania,UGAI15-4892,2015,H1N1,A,False
+EU980516.1,1752,mallard,md,199,2003,H1N1,A,False
+KF424138.1,1710,mallard,minnesota,Sg-00628,2008,H1N1,A,False
+MF613792.1,1701,mallard,alberta,606,2015,H1N1,A,False
+MH503005.1,1743,ruddy turnstone,new jersey,UGAI15-4073,2015,H1N1,A,False
+MH597495.1,1748,ruddy turnstone,delaware,650682,2002,H1N1,A,False
+MH597471.1,1748,ruddy turnstone,delaware,650664,2002,H1N1,A,False
+MH341798.1,1746,ruddy turnstone,new jersey,UGAI15-3256,2015,H1N1,A,False
+MH502868.1,1746,ruddy turnstone,new jersey,UGAI15-3341,2015,H1N1,A,False
+MH502860.1,1746,ruddy turnstone,new jersey,UGAI15-3256,2015,H1N1,A,False
+MH341838.1,1746,ruddy turnstone,new jersey,UGAI15-4243,2015,H1N1,A,False
+MH341806.1,1746,ruddy turnstone,new jersey,UGAI15-3295,2015,H1N1,A,False
+MH502957.1,1746,ruddy turnstone,new jersey,UGAI15-3938,2015,H1N1,A,False
+MH501745.1,1746,ruddy turnstone,new jersey,AI12-2099,2012,H1N1,A,False
+MH134849.1,1777,environment,chile,C6861,2016,H1N1,A,False
+MK237430.1,1746,environment,maryland,17OS3446,2017,H1N1,A,False
+OR044145.1,1701,environment,japan,KU-H16,2021,H1N1,A,False
+KJ195788.1,1701,environment,gainesville,01,2014,H1N1,A,True
+KY681473.1,1777,environment,gainesville,12,2016,H1N1,A,True
+MH134813.1,1777,environment,chile,C6871,2016,H1N1,A,False
+MH134780.1,1777,environment,chile,C7287,2016,H1N1,A,False
+MK237334.1,1767,environment,maryland,17OS3465,2017,H1N1,A,False
+MH134606.1,1777,environment,chile,C6860,2016,H1N1,A,False
+CY020917.1,1744,environment,ohio,1007,2005,H1N1,A,False
+KX232477.1,1701,turkey,ontario,FAV-005-2,2016,H1N1,A,True
+FJ357104.1,1753,turkey,nc,17026,1988,H1N1,A,True
+MH546995.1,1747,turkey,missouri,16-009707-1,2016,H1N1,A,True
+EU743167.1,1752,turkey,sd,7034,1986,H1N1,A,False
+MH546987.1,1761,turkey,minnesota,16-009265-3,2016,H1N1,A,True
+EU735786.2,1745,turkey,nc,19762,1988,H1N1,A,True
+EU743143.1,1748,turkey,mo,21939,1987,H1N1,A,False
+HM370975.1,1777,turkey,ontario,FAV114-17,2009,H1N1,A,True
+EU743159.1,1753,turkey,ia,21089-3,1992,H1N1,A,True
+KX232509.1,1701,turkey,manitoba,FAV-0009-3,2016,H1N1,A,True
+MW855413.1,1777,human,new york city,PV07999,2020,H1N1,A,True
+MW855419.1,1777,human,new york city,PV08025,2020,H1N1,A,True
+OP433195.1,1777,human,new york city,PV42740,2022,H1N1,A,True
+MW855511.1,1778,human,new york city,PV08772,2020,H1N1,A,True
+MW855538.1,1777,human,new york city,PV08764,2020,H1N1,A,True
+MW855357.1,1777,human,new york city,PV07997,2020,H1N1,A,True
+MW855393.1,1778,human,new york city,PV08012,2020,H1N1,A,True
+MW855535.1,1777,human,new york city,PV08763,2020,H1N1,A,True
+MW855437.1,1777,human,new york city,PV08769,2020,H1N1,A,True
+MW855369.1,1777,human,new york city,PV07879,2020,H1N1,A,True

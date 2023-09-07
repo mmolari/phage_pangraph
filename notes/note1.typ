@@ -67,7 +67,7 @@ I then repeat the previously-described procedure. Here are the updated plots:
     ]
 )
 
-As expected, human sequences are interspersed in the tree, showing that the same virus can cross species boundary.
+As expected, human sequences are interspersed in the tree.
 
 #figure( image("assets/n1/mash_dist_updated.png", width: 80%))
 

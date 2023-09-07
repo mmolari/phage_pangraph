@@ -112,7 +112,7 @@ top_hosts = top_hosts.index
 # df.loc[selected_ids]
 
 np.random.seed(0)
-N_host = 5
+N_host = 10
 STR = "H1N1"
 selected_ids = []
 for h in top_hosts:
@@ -135,36 +135,5 @@ df.loc[selected_ids]
 # %%
 sdf = df.loc[selected_ids].set_index("acc").drop(columns=["flu type"])
 sdf.to_csv("flu_dataset.csv")
-
-# %%
-
-sdf
-# %%
-flu_accnums = [
-    "MW345940.1",
-    "OR044145.1",
-    "MW186796.1",
-    "MW186804.1",
-    "LC339531.1",
-    "FJ432770.1",
-    "LC367498.1",
-    "GQ257448.1",
-    "EU743167.1",
-    "KF424178.1",
-    "KF424258.1",
-    "MH597471.1",
-    "MH597495.1",
-    "MH502868.1",
-    "MH546347.1",
-    "MH341798.1",
-    "MH503005.1",
-    "MH134849.1",
-    "MW132351.1",
-    "MK237430.1",
-    "MT197120.1",
-]
-sdf["clade"] = sdf.index.isin(flu_accnums)
-# %%
-sdf
 
 # %%

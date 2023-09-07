@@ -1,7 +1,7 @@
 #import "template.typ": *
 
 #show: project.with(
-  title: "Notes",
+  title: "Influenza A hemagglutinin dataset",
   authors: (
     "Marco Molari",
   ),
@@ -11,60 +11,29 @@
   date: "August 14, 2023",
 )
 
-= Notes
+= Influenza A Hemagglutinin
 
-- Add human SARS-CoV-2 genomes to the dataset.
-- HIV-like, more cross-species examples?
-- Flu virus crosses species boundary. How is the diversity in its genome? Are the genes in the same order?
+I searched NCBI nucleotide (7/09/23) for the keyword `influenza A segment 4 hemagglutinin complete cds` with `genomic DNA/RNA` constraint and length between 300 and 3000 bp. This gives 141938 results. I download the summary file from NCBI.
 
-= Influenza workflow
+I parse this file and extract host and type information. For the 8 prevalent hosts, I select at most random 10 sequences with the constraint that they must all belong to different sequence types.
 
-== Different sequence types
+These sequence types are however too diverged to be merged into a single graph.
 
-I searched NCBI nucleotide (7/09/23) for the keyword `influenza segment 4 hemagglutinin complete cds` with `genomic DNA/RNA` constraint and length between 300 and 3000 bp. This gives 141938 results. I download the summary file from NCBI.
+#figure(image("assets/n3/flu_all_mash.png", width: 80%), 
+  caption: [mash distance matrix between isolates in the dataset.]
+)
+#figure(image("assets/n3/flu_all_bandage.png", width: 60%), 
+  caption: [flu bandage graph.]
+)
 
-I parse this file and extract host and type information. For the 8 prevalent hosts, I select at most random 10 sequences with the constraint that they must all belong to different sequence types. 
+Therefore I restrict the dataset to sequences of type `H1N1` and sample 10 random sequences per host. Sequences are divided in two large clades. Sequences from the different clades are again highly diverged, and separated in two different paths.
 
-```
-MW345940.1
-OR044145.1
-MW186796.1
-MW186804.1
-LC339531.1
-FJ432770.1
-LC367498.1
-GQ257448.1
-EU743167.1
-KF424178.1
-KF424258.1
-MH597471.1
-MH597495.1
-MH502868.1
-MH546347.1
-MH341798.1
-MH503005.1
-MH134849.1
-MW132351.1
-MK237430.1
-MT197120.1
-```
-```
+#figure(image("assets/n3/flu_mash_h1n1.png", width: 70%), 
+  caption: [mash distance matrix between isolates in the `H1N1` dataset.]
+)
 
-KY681473.1
-KJ195788.1
-KX232477.1
-MH546987.1
-MW811345.1
-MW855419.1
-MW855413.1
-MW855511.1
-MH546995.1
-MW855538.1
-OP433195.1
-KP186072.1
-KP288100.1
-MW240531.1
-FJ357104.1
-CY025002.1
-EU735794.2
-```
+If we restrict the graph to the first clade, we get a graph composed of a single block, and a core-genome tree compatible with the mash distance matrix.
+
+#figure(image("assets/n3/flu_coretree_clade.png", width: 60%), 
+  caption: [core-genome .]
+)
