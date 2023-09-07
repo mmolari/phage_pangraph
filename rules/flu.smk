@@ -25,6 +25,8 @@ rule FL_build:
         temp("results/flu/pangraph/raw-{opt}.json"),
     params:
         opt=lambda w: kernel[w.opt],
+    conda:
+        "../conda_env/pangraph.yml"
     shell:
         """
         pangraph build {params.opt} {input.fa} > {output}
@@ -130,7 +132,7 @@ rule FL_fig_mash_simple:
     input:
         mash=rules.FL_mash.output,
     output:
-        "figures/flu/{opt}-mash_dist_simple.png",
+        "figures/flu/mash_dist_simple.png",
     conda:
         "../conda_env/bioinfo.yml"
     shell:
@@ -164,6 +166,6 @@ rule FL_all:
         expand(rules.FL_export.output, opt=kernel.keys()),
         expand(rules.FL_coretree.output, opt=kernel.keys()),
         expand(rules.FL_fig_mash.output, opt=kernel.keys()),
-        expand(rules.FL_fig_mash_simple.output, opt=kernel.keys()),
+        expand(rules.FL_fig_mash_simple.output),
         expand(rules.FL_fig_mosaic.output, opt=kernel.keys()),
         expand(rules.FL_fig_bandage.output, opt=kernel.keys()),

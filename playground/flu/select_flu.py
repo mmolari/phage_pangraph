@@ -88,9 +88,32 @@ top_hosts = top_hosts.index
 # %%
 
 # select strains from top isolates
-np.random.seed(0)
+# np.random.seed(0)
+# N_host = 10
+# selected_ids = []
+# for h in top_hosts:
+#     sdf = df[df["host"] == h]
+#     l = len(sdf)
+#     order = list(range(l))
+#     np.random.shuffle(order)
+#     print(h)
+#     selected_str = []
+#     n_sel = 0
+#     for i in order:
+#         if n_sel == N_host:
+#             break
+#         row = sdf.iloc[i]
+#         idx = sdf.index[i]
+#         if row["strain"] in selected_str:
+#             continue
+#         selected_ids.append(idx)
+#         selected_str.append(row["strain"])
+#         n_sel += 1
+# df.loc[selected_ids]
 
-N_host = 10
+np.random.seed(0)
+N_host = 5
+STR = "H1N1"
 selected_ids = []
 for h in top_hosts:
     sdf = df[df["host"] == h]
@@ -98,17 +121,15 @@ for h in top_hosts:
     order = list(range(l))
     np.random.shuffle(order)
     print(h)
-    selected_str = []
     n_sel = 0
     for i in order:
         if n_sel == N_host:
             break
         row = sdf.iloc[i]
         idx = sdf.index[i]
-        if row["strain"] in selected_str:
+        if row["strain"] != STR:
             continue
         selected_ids.append(idx)
-        selected_str.append(row["strain"])
         n_sel += 1
 df.loc[selected_ids]
 # %%

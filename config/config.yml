@@ -22,4 +22,5 @@ pangraph:
   kernel-options:
     std: "-k minimap2 -s 20 -a 100 -b 10"
     20-20-5: "-k minimap2 -s 20 -a 20 -b 5"
+    mmseqs: "-k mmseqs -a 10 -b 0"
   polish-options: "-c"
