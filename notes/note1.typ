@@ -47,3 +47,32 @@ The mash distance for all of the isolates remains below 0.5%.
         Linear representation for the pangenome graph. Genomes are almost completely alignable, except for some short overhangs missing in one strain (`MW064259`) around the edges.
     ]
 )
+
+= Adding Human Samples
+
+For completeness I also added human samples by:
++ downloading a random (n=2000) subset of sequences from NCBI, with the constraint of sequences being complete and not containing any ambiguous nucleotide, and having host assigned to human.
++ from this subset, selecting one representative sequence per pango lineage present in the non-human sample.
++ This increases the number of sequences considered to 73.
+
+I then repeat the previously-described procedure. Here are the updated plots:
+
+#figure( image("assets/n1/dset_stats_updated.png", width: 100%))
+
+#figure( image("assets/n1/pangraph_export_updated.png", width: 30%))
+
+#figure( image("assets/n1/scov_coretree_updated.png", width: 80%),
+    caption: [
+        Core-genome tree of 73 SARS-Cov-2 isolates from different-non human host. For each isolate we report the host and the corresponding pango lineage.
+    ]
+)
+
+As expected, human sequences are interspersed in the tree, showing that the same virus can cross species boundary.
+
+#figure( image("assets/n1/mash_dist_updated.png", width: 80%))
+
+#figure( image("assets/n1/paths_updated.png", width: 80%),
+    caption: [
+        Linear representation for the pangenome graph. Genomes are almost completely alignable, except for some short overhangs missing in two strains around the edges.
+    ]
+)
