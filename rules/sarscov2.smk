@@ -146,7 +146,8 @@ rule SC_fig_mosaic:
         tree=rules.SC_coretree.output,
         pan=rules.SC_polish.output,
     output:
-        "figures/scov/{opt}-mosaic.png",
+        fig1="figures/scov/{opt}-mosaic.png",
+        fig2="figures/scov/{opt}-paths.png",
     conda:
         "../conda_env/bioinfo.yml"
     shell:
@@ -154,7 +155,12 @@ rule SC_fig_mosaic:
         python3 scripts/plot_mosaic.py \
             --tree {input.tree} \
             --pan {input.pan} \
-            --fig {output}
+            --fig {output.fig1}
+
+        python3 scripts/plot_junction_categories.py \
+            --tree {input.tree} \
+            --pangraph {input.pan} \
+            --fig {output.fig2}
         """
 
 

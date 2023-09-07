@@ -11,7 +11,7 @@ import pathlib
 fig_fld = pathlib.Path("figs/pl3")
 fig_fld.mkdir(parents=True, exist_ok=True)
 
-df = pd.read_csv("../config/sarscov2_nonhuman.csv", parse_dates=["Collection_Date"])
+df = pd.read_csv("../config/sarscov2.csv", parse_dates=["Collection_Date"])
 df.set_index("Accession", inplace=True)
 
 
@@ -62,6 +62,7 @@ tree.root_at_midpoint()
 tree.ladderize()
 # %%
 host_cmap = {
+    "Homo sapiens": "k",
     "Felis catus": "C0",
     "Odocoileus virginianus": "C1",
     "Canis lupus familiaris": "C2",
@@ -78,7 +79,7 @@ host_cmap = {
 
 
 fig, axs = plt.subplots(
-    1, 2, figsize=(8, 8), gridspec_kw={"width_ratios": [3, 1]}, sharey=True
+    1, 2, figsize=(8, 10), gridspec_kw={"width_ratios": [3, 1]}, sharey=True
 )
 
 ax = axs[0]

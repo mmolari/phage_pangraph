@@ -53,7 +53,7 @@ if __name__ == "__main__":
         ax.plot([b, e], [y, y], color=c, lw=10)
 
     fig, axs = plt.subplots(
-        1, 2, figsize=(12, 10), gridspec_kw={"width_ratios": [1, 4]}, sharey=True
+        1, 2, figsize=(12, 15), gridspec_kw={"width_ratios": [1, 4]}, sharey=True
     )
 
     ax = axs[0]

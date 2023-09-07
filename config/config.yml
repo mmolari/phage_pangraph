@@ -1,6 +1,6 @@
 accession: "config/accession_numbers.csv"
 accession-covid: "config/covid_dataset.csv"
-accession-sarscov: "config/sarscov2_nonhuman.csv"
+accession-sarscov: "config/sarscov2.csv"
 accession-flu: "config/flu_dataset.csv"
 
 species:
@@ -20,7 +20,6 @@ mash-opt: "-k 15 -s 10000"
 
 pangraph:
   kernel-options:
-    std: "-k minimap2 -s 20 -a 100 -b 10"
     20-20-5: "-k minimap2 -s 20 -a 20 -b 5"
-    mmseqs: "-k mmseqs -a 10 -b 0"
+    20-0-0: "-k minimap2 -s 20 -a 0 -b 0"
   polish-options: "-c"
