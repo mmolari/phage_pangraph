@@ -6,6 +6,7 @@
 /playground/flu/figs
 /playground/flu/*.txt
 /playground/flu/*.csv
+/playground/aionostat/fig
 /figures
 /.vscode
 /log
