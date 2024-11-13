@@ -4,17 +4,18 @@ accession-sarscov: "config/sarscov2.csv"
 accession-flu: "config/flu_dataset.csv"
 
 species:
-  - "autographiviridae"
-  - "demerecviridae_markadamsvirinae"
-  - "drexlerviridae"
-  - "myoviridae_ounavirinae"
-  - "myoviridae_tevenvirinae"
-  - "myoviridae_vequintavirinae_and_relatives"
-  - "schitoviridae"
-  - "siphoviridae_dhillonvirus"
-  - "siphoviridae_queuovirinae_seuratvirus"
-  - "siphoviridae_queuovirinae_sonagvirus"
-  - "basel"
+  - "aionostat"
+  # - "autographiviridae"
+  # - "demerecviridae_markadamsvirinae"
+  # - "drexlerviridae"
+  # - "myoviridae_ounavirinae"
+  # - "myoviridae_tevenvirinae"
+  # - "myoviridae_vequintavirinae_and_relatives"
+  # - "schitoviridae"
+  # - "siphoviridae_dhillonvirus"
+  # - "siphoviridae_queuovirinae_seuratvirus"
+  # - "siphoviridae_queuovirinae_sonagvirus"
+  # - "basel"
 
 mash-opt: "-k 15 -s 10000"
 
@@ -23,3 +24,32 @@ pangraph:
     20-20-5: "-k minimap2 -s 20 -a 20 -b 5"
     20-0-0: "-k minimap2 -s 20 -a 0 -b 0"
   polish-options: "-c"
+
+
+aionostat:
+  refs:
+    MaxBurger: "MZ501093"
+    WalterGehring: "MZ501111"
+  acc:
+    - MZ501102
+    - NC_022323.1
+    - MZ501082
+    - MZ501083
+    - MZ501093
+    - NC_041871.1
+    - MG963916.1
+    - MZ501062
+    - LN881735.1
+    - MZ501048
+    - MK962749.1
+    - MZ501061
+    - MZ501073
+    - MZ501054
+    - MK373780.1
+    - MZ501094
+    - MZ501060
+    - MZ501111
+    - KR698074.1
+    - NC_011041.1
+    - MH752840.1
+    - MH491969.1

@@ -1,6 +1,17 @@
 configfile: "config/config.yml"
 
 
+# load api key
+try:
+    with open(".api_key.txt") as f:
+        api_key = f.read().strip()
+        api_key = f"--api-key {api_key}"
+except FileNotFoundError:
+    # print warning
+    print("No api key found. Please consider adding one to .api_key.txt")
+    api_key = ""
+
+
 import pandas as pd
 
 df_acc = pd.read_csv(config["accession"])
@@ -9,6 +20,7 @@ species_to_acc = df_acc.groupby("species")["genbank_accession"].apply(list).to_d
 species_to_acc["basel"] = df_acc[df_acc["basel_collection"]][
     "genbank_accession"
 ].to_list()
+species_to_acc["aionostat"] = config["aionostat"]["acc"]
 species = config["species"]
 
 # accession numbers of coronaviridae

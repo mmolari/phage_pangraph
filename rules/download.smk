@@ -3,9 +3,11 @@ rule download_gbk:
         "raw_data/gbk/{acc}.gbk",
     conda:
         "../conda_env/bioinfo.yml"
+    params:
+        api=api_key,
     shell:
         """
-        ncbi-acc-download {wildcards.acc} -e all -F genbank
+        ncbi-acc-download {wildcards.acc} -e all -F genbank {params.api}
         mv {wildcards.acc}.gbk {output}
         """
 
