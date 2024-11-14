@@ -42,8 +42,8 @@ def segment(ax, s, e, b):
 
     ax.plot([s, e], [freq, freq], color=color, lw=1)
 
-    if core:
-        ax.fill_between([s, e], 0, freq, color="C0", alpha=1, zorder=-2)
+    # if core:
+    #     ax.fill_between([s, e], 0, freq, color="C0", alpha=1, zorder=-2)
 
 
 fig, axs = plt.subplots(2, 1, figsize=(12, 5))

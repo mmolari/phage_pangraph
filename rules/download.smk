@@ -12,6 +12,17 @@ rule download_gbk:
         """
 
 
+rule hybrid_ref:
+    input:
+        "data/hybrid_ref.fa",
+    output:
+        "raw_data/fa/hybrid_ref.fa",
+    shell:
+        """
+        cp {input} {output}
+        """
+
+
 rule gbk_to_fasta:
     input:
         gbk=rules.download_gbk.output,
